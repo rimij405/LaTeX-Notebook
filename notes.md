@@ -37,3 +37,35 @@ pandoc -s {FILENAME}.md -o {FILENAME}.pdf
 ```
 
 Consider using pandoc filters for even more flexibility.
+
+## Math Equations
+
+This workflow also allows you to convert LaTeX syntax into math equations.
+
+The following syntax:
+
+```LaTeX
+$$ a = mx + b $$
+```
+
+Generates:
+
+$$ a = mx + b $$
+
+Inline equations can be displayed using one set of `$` signs:
+
+```LaTeX
+$a = \frac{\sum_{i=1}^{a}c_i\mu_i}{\sum_{i=1}^{a}c_i\tau_i} = 1 \text{ when } \sum_{i=1}^{a}c_i = 0$
+```
+
+Generates:
+
+$a = \frac{\sum_{i=1}^{a}c_i\mu_i}{\sum_{i=1}^{a}c_i\tau_i} = 1 \text{ when } \sum_{i=1}^{a}c_i = 0$.
+
+Particularly complex statements can be displayed using the `\displaystyle` command:
+
+```LaTeX
+$\frac{\displaystyle \sum_{i=1}^{a}c_i\mu_i}{\displaystyle \sum_{i=1}^{a}c_i\tau_i} = 1 \text{ when } \sum_{i=1}^{a}c_i = 0$
+```
+
+$\frac{\displaystyle \sum_{i=1}^{a}c_i\mu_i}{\displaystyle \sum_{i=1}^{a}c_i\tau_i} = 1 \text{ when } \sum_{i=1}^{a}c_i = 0$
